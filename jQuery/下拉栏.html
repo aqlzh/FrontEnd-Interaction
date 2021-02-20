@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery.min.js"></script>
+    <title>下拉菜单</title>
+    <style>
+      body{
+           position: relative;
+        }
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    li{
+        list-style:none;
+    }
+    .nav{
+        width: 400px;
+        height:300px;
+        margin: 300px  auto;
+        display: flex;
+        /* background-color: #f2f2f5; */
+        position: relative;
+    }
+    .nav .ab{
+       
+        float: left;
+        flex:1;
+       
+    }
+    .nav .ab  a{
+        display: block;
+        text-align: center;
+        background-color: #f7671d;
+        text-decoration: none;   /*取消下划线*/
+    }
+    .nav .ab  a:hover  {
+         background-color:greenyellow;
+    }
+    .nav .ab ul{
+        display: none; 
+        position: absolute;             /* 子绝符相  找好两对应 */
+        /* top: 500px; */
+        border: 1px solid red ;
+    }
+    .nav .ab ul li{
+         /* display: block; 
+         float: left; */
+         width:100px ;
+         padding-top: 5px;
+         height: 30px;
+         border-bottom:  1px solid peru;
+         
+         text-align: center;
+    } 
+    .nav .ab ul li:hover{
+        background-color:  #f2f2f5;
+    }
+    .nav ul{
+        /* display: none; */
+        /* padding: 40px; */
+        border: 1px solid skyblue;
+    }
+    h3 { 
+        font-size: 20px;
+        position: absolute;
+        top: -100px;
+        left: 45%;
+        color: aqua;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h3>下拉菜单制作</h3>
+        <ul class="nav">
+            <li class="ab">
+                <a href="#">微博</a>    <!--第一个孩子-->
+                <ul>                <!--第二个孩子-->
+                    <li>@我</li>
+                    <li>消息</li>
+                    <li>最新</li>
+                </ul>
+            </li>
+            <li class="ab">
+                <a href="#">热门</a>
+                <ul>      
+                    <li>同城</li>
+                    <li>搞笑</li>
+                    <li>明星</li>
+                </ul>
+            </li>
+            <li class="ab">
+                <a href="#">关注</a>
+                <ul>        
+                    <li>科技</li>
+                    <li>代码</li>
+                    <li>教育</li>
+                </ul>
+            </li>
+            <li class="ab">
+                <a href="#">评论</a>
+                           <ul>         
+                            <li>沙发</li>
+                            <li>热评</li>
+                            <li>榜单</li>
+                         </ul>
+            </li>
+        </ul>
+     <script>
+    //   var nav = document.querySelector('.nav');
+    //   var lis = nav.children;
+    //    //
+    //   for(var i= 0 ; i < lis.length ; i++) {
+    //      lis[i].onmouseover = function() {
+    //          this.children[1].style.display = 'block';
+    //      }  
+    //      lis[i].onmouseout = function() {
+    //          this.children[1].style.display = 'none';
+    //      }  
+    //   }
+
+    // jQuery  1
+    // $(function(){
+    //     $(".nav>li").mouseover(function(){
+    //         $(this).children("ul").show();
+    //     });
+        
+    //     $(".nav>li").mouseout(function(){
+    //         $(this).children("ul").hide();
+    //     });
+    // })
+
+    //  jQuery 2 
+    $(function(){
+        $(".nav>li").hover(function(){
+            $(this).children("ul").stop().slideToggle();
+        });
+    })
+
+    // var a=2 ,b =4 ,c=8 ;
+    // var x = (a + b) , c;
+    // console.log(x);
+
+    //  var a=2 ,b =4 ,c=8;
+    //  var x = (a + b , c);
+    //  console.log(x);
+     
+    
+
+
+   
+     </script>
+</body>
+</html>

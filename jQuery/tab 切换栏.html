@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery.min.js"></script>
+    <title> tab切换制作 </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }   /* 初始化的重要性*/
+    .box{
+        margin: 200px  auto;
+        width: 500px;
+        height: 435px;
+        background-color: skyblue;
+       
+    }
+    .nav ul{
+        width: 50px;
+        height: 435px;
+        border: 1px solid red; 
+        flex-direction: column;
+        background-color: orange;
+        
+    }
+    .nav li{
+        line-height: 109px;
+        list-style: none;
+        /* float: left; */   
+        text-align:center;
+        border-right: 1px solid green ;   
+        flex:1;
+        cursor: pointer;
+    }
+    .nav ul .current {
+        background-color: red;
+        color: #fff;
+    }
+    .footer .item {
+      display: none;
+    }
+    body{
+        position: relative;
+    }
+    .footer div img{
+        position: absolute;
+        top: 225px;
+        left: 560px;
+    
+    }
+    h2 {
+        color: blue;
+        text-align: center;
+        margin-top: 100px;
+    }
+    </style>
+</head>
+<body>
+    <h2>JS tab 栏切换</h2>
+    <div class="box">
+            <div class="nav">
+                <ul>
+                    <li class="current">花丸</li>
+                    <li>千歌</li>
+                    <li>花阳</li>
+                    <li>露比</li>
+                </ul>
+            </div>
+            <div class="footer">
+               <div class="item current" style="display: block;">
+                <img src="images/1.jpg" alt="" width="450px">
+               </div>
+               <div class="item">
+                <img src="images/2.jpg" alt="" width="450px">
+               </div>
+               <div class="item">
+                <img src="images/3.jpg" alt="" width="450px">
+               </div>
+               <div class="item">
+                <img src="images/4.jpg" alt="" width="450px">
+               </div> 
+            </div>
+    </div>
+    <script>
+    // var nav = document.querySelector('.nav')  //获取父亲元素
+    // var lis = nav.querySelectorAll('li');
+    // var items = document.querySelectorAll('.item')     //经常在此处缺少 All
+    // //for 循环绑定点击事件
+    // for( var i =0 ; i < lis.length ; i++){
+    //     //给所有的li 设置属性
+    //     lis[i].setAttribute('index' , i)
+
+    //     lis[i].onclick = function(){
+    //         //排他
+    //     for( var i =0 ; i < lis.length ; i++){
+    //         lis[i].className = '';
+
+    //     }
+    //     //留己
+    //     this.className = 'current';
+
+    //     // 下面相应变化的模块
+    //     var index = this.getAttribute('index');
+    //     for( var i = 0 ; i < items.length ; i++){
+    //         items[i].style.display = 'none';
+    //     }
+    //     items[index].style.display = 'block';
+    //     }
+    // }
+
+
+    //  jquery 1
+    // $(function(){
+    //     $(".nav li").mouseover(function(){
+    //      var index = $(this).index();
+    //      $(".footer .item ").eq(index).show();
+    //      $(".footer .item ").eq(index).siblings().hide();
+    //     })
+    // })
+
+    // jquery 2
+    $(function(){
+        $(".nav li").click(function(){
+            $(this).addClass("current").siblings().removeClass();
+            var index = $(this).index();
+            // console.log(index);         
+            $(".footer .item").eq(index).show().siblings().hide();
+        })
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>突出显示</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+        }
+        .box{
+            width: 210px;
+            height:258px;
+            /* background-color:pink; */
+            margin: 300px auto;
+
+        }
+        li{
+            list-style: none;
+        }
+        .box li{
+            float: left;
+            border: 3px solid skyblue;
+            background-color: pink;
+        }
+        
+       
+       
+    </style>
+</head>
+<body>
+    <div class="box">
+        
+            <ul>   
+                <li> <a href="#"><img src="images/g.jpg" alt="" width="62px"></a> </li>
+                <li> <a href="#"><img src="images/b.jpg" alt=""  width="62px"></a> </li>
+                <li> <a href="#"><img src="images/c.jpg" alt=""  width="62px"></a> </li>          
+                <li> <a href="#"><img src="images/d.jpg" alt=""  width="62px"></a> </li>
+                <li> <a href="#"><img src="images/e.jpg" alt=""  width="62px"></a> </li>
+                <li> <a href="#"><img src="images/f.jpg" alt=""  width="62px"></a> </li>
+            </ul>
+       
+    </div>
+    <script>
+        $(function(){
+            $(".box li").hover(function(){
+                $(this).siblings().stop().fadeTo(400,0.5);
+            },function(){
+                $(this).siblings().stop().fadeTo(400,1);
+            })
+        });
+      
+    
+    </script>
+</body>
+</html>
