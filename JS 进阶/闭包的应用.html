@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包 索引号</title>
+</head>
+<body>
+<ul class="nav">
+    <li>高海千歌</li>
+    <li> 渡边曜 </li>
+    <li> 樱内梨子</li>
+</ul>
+  <script>
+      var lis = document.querySelector('.nav').querySelectorAll('li')  ;
+
+    //   for (var i = 0 ;i < lis.length ; i++){
+    //       lis[i].index = i ;           // index 不能使用有兼容性问题  ?   关于 = 的问题
+    //       lis[i].onclick = function(){
+    //           console.log(i);
+              
+    //       }
+    //   }
+
+    for( var i = 0 ; i < lis.length ; i++){
+        // 利用for 循环创建4个立即执行函数
+        (function(i){
+        lis[i].onclick = function(){
+            console.log(i);   
+        }
+        })(i);
+    }
+    // for (var i = 0; i < lis.length; i++) {
+    //         // 利用for循环创建了4个立即执行函数
+    //         // 立即执行函数也成为小闭包因为立即执行函数里面的任何一个函数都可以使用它的i这变量
+    //         (function(i) {
+    //             // console.log(i);
+    //             lis[i].onclick = function() {
+    //                 console.log(i);
+
+    //             }
+    //         })(i);
+    //     }
+  </script>  
+</body>
+</html>
+
