@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    div[ class=an1]   {color: orange;}                            /* 属性选择器的应用 */
+     div[class$=bi]    {color:purple;}          /*结束 */               /*自己发现不能是全数字   eg:class=2*/
+     div[class^=an]    {font-size:50px;}
+     div[class*=html]   {text-shadow: 0px 3px rgb(250,  0, 0,  0.5);}         /*任意选择器*/
+     p::first-letter{ color: hotpink; font-size: 50px;}
+     span::before{content: "我";}
+     span::after {content:"习";}            /*注意文字在双引号内*/
+     .tp {
+        width: 900px;
+        height: 800px;
+        background-color:orange;
+        background-image: url(实操素材.png);
+        /* background-repeat: no-repeat; */ background-repeat: repeat-x;
+     } 
+    </style>
+</head>
+<body>　
+    
+     <div class="an1">高海千歌</div>
+     <div class="an2">渡边曜</div>
+     <div class="anbi">樱内梨子</div>
+     <div class="bnbi">黑泽露比</div>
+     <div class="bn2"> 津岛善子</div>
+     <div class="html css">高坂穗乃果</div>
+     <div class="xiao html">小泉花阳</div>
+     <div class="xing kong html">星空凛</div>
+     <div class="nan css">南琴梨</div>
+    <br><br>
+    <span>爱学</span>
+    <br><br>
+    <div class="tp"></div>
+    
+    
+    
+    
+   <h3>中国朝代顺序：</h3>
+    <p>夏、商、周[西周、东周(春秋、战国)]、
+        秦、西楚，西汉、新朝、玄汉、东汉、三国时期(魏、蜀、吴)、
+        晋(西晋、东晋)、南北朝[南朝(宋、齐、梁、陈)、北朝(北魏、东魏、西魏、北齐、北周)]
+        、隋、唐、五代(后梁、后唐、后晋、后汉、后周)、
+        十国[前蜀、后蜀、南吴、南唐、吴越、闽国、南楚、南汉、南平、北汉]、
+        宋(北宋、南宋)、辽、西夏、金、
+        元、明、清、中华民国、中华人民共和国</p>。    
+
+    
+</body>
+</html>
