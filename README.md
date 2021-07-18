@@ -2,7 +2,7 @@
 Front and Back End Interaction 
 
 
-[Promise_axios  路由  模块化 参考视频](https://www.bilibili.com/video/BV1KJ411U7ML?p=74)
+[Promise_axios  路由  模块化 （Vue）参考视频](https://www.bilibili.com/video/BV1KJ411U7ML?p=74)
 
 
 [Ajax 参考视频](https://www.bilibili.com/video/BV1ji4y1876Y?from=search&seid=5236133256298285805)
