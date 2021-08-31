@@ -22,4 +22,20 @@ Front and Back End Interaction
 [JavaScript  高级](https://www.bilibili.com/video/BV1X7411n72U?p=1)
 
 
+# JS 推荐书籍与网站
 
+书籍
+
+-  JavaScript  (青蓝色 犀牛书)    --  >  JavaScript : The  Good Parts (青蓝色 蝴蝶书)
+-  [图灵程序设计丛书].数据结构与算法：JavaScript描述
+-  JavaScript  (红宝石书)
+
+网站
+
+- [MDN](https://developer.mozilla.org/zh-CN/)
+- [w3schools.com](https://www.w3school.com.cn/)
+- [runoob.com](https://www.runoob.com/)
+
+- [codecademy. com](codecademy.com)
+- [freecodecamp.org](https://learn.freecodecamp.one/)
+- [在线编程网站](
